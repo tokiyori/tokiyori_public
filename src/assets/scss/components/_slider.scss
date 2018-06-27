@@ -1,0 +1,21 @@
+/* ============================================================ //
+// @ slider
+// ============================================================ */
+
+$img_path: "./../../assets/img/";
+
+#customize-wrapper{
+  #top_carousel{
+    .eyecatch{
+      position: relative;
+      background: transparent!important;
+      max-height: 100px;
+      img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+      }
+    }
+  }
+}

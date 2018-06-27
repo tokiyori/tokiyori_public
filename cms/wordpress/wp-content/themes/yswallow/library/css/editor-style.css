@@ -1,0 +1,62 @@
+body.mceContentBody {
+	font-size: 15px!important;
+    padding: 0.7em 1em!important;
+    background: #fff!important;
+    font-family: sans-serif;
+}
+
+body.mceContentBody h2,
+body.mceContentBody h3,
+body.mceContentBody h4{
+	padding: 0.5em;
+	margin-top: 4%;
+}
+body.mceContentBody h2{
+	background: #eee;
+}
+body.mceContentBody h3{
+	border: 2px solid #ddd;
+	border-left: none;
+	border-right: none;
+}
+body.mceContentBody h4{
+	border-left: 3px solid #ddd;
+}
+
+body.mceContentBody .editor-area {
+    margin: 0px 20px 0.5em 20px;
+    font-size:15px!important;
+    line-height:150%;
+}
+body.mceContentBody p{
+	margin-bottom: 1.2em;
+}
+body.mceContentBody ul,
+body.mceContentBody ol{
+	padding-left: 1.8em;
+}
+body.mceContentBody blockquote{
+	border: 1px solid #ddd;
+	padding: 10px;
+	margin: 0;
+}
+body.mceContentBody blockquote::before{
+	content: '"';
+	font-size:2em;
+	line-height:1;
+}
+body.mceContentBody em{
+	font-style: italic;
+}
+body.mceContentBody pre{
+	background: #555555;
+	color: #fff;
+	padding: 1em;
+}
+body.mceContentBody dt{
+	font-weight: bold;
+	margin: 0 0 0.3em;
+}
+body.mceContentBody dd{
+	margin: 0 0 1.5em;
+}

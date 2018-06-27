@@ -1,0 +1,57 @@
+/* ============================================================ //
+// @ header
+// ============================================================ */
+
+$img_path: "./../../assets/img/";
+
+#customize-wrapper {
+
+  .header #logo{
+    @include min-media($screen-lg){
+      margin: 0px auto 5px;
+    }
+  }
+  // @ tmp-sw | グローバルナビ改修
+  // ------------------------------------------------------------
+
+  #g_nav{
+    @include min-media($screen-lg){
+      margin-bottom: 3px;
+    }
+    @include max-media($screen-md) {
+      display: none;
+    }
+    @include max-media($screen-sm) {
+      display: none;
+    }
+  }
+
+  // @ カスタマイズヘッダー
+  // ------------------------------------------------------------
+
+  .sitecopy{
+    text-shadow: 1px 1px 3px #000;
+    margin: 0.3em 0 .5em;
+    @include max-media($screen-md){
+      font-size:  1.8em;
+    }
+  }
+  .sub_sitecopy{
+    text-shadow: 1px 1px 3px #000;
+  }
+
+  // @ ハンバーガーナビ
+  // ------------------------------
+
+  //.nav_btn{
+  //  display: none;
+  //
+  //  @include max-media($screen-md) {
+  //    display: block;
+  //  }
+  //
+  //  @include max-media($screen-sm) {
+  //    display: block;
+  //  }
+  //}
+}

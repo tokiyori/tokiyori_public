@@ -1,0 +1,373 @@
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+
+// @ Variables
+// ------------------------------------------------------------
+//== Colors
+
+$gray-base:              #333;
+$gray-darker:            lighten($gray-base, 13.5%); // #222
+$gray-dark:              lighten($gray-base, 20%);   // #333
+$gray:                   lighten($gray-base, 33.5%); // #555
+$gray-light:             #999;
+$gray-lighter:           lighten($gray-base, 93.5%); // #eee
+
+
+$brand-primary:         darken(#428bca, 6.5%); // #337ab7
+$brand-success:         #1cb30d;
+$brand-info:            $gray;
+$brand-warning:         #ed9a25 ;
+$brand-error:           #d9534f;
+$brand-disable:         #888;
+
+$brand-mens:            #153a89;
+$brand-ladies:          #c62b8a;
+$brand-unisex: #f2870e;
+
+// @ brand main color
+// ------------------------------------------------------------
+
+$brand-main         : #0596c8;
+$brand-main-darker  : #23408e;
+$brand-main-darken  : #082959;
+$brand-main-lighter : #cbe0d4;
+$brand-main-lighten : #cbe0d4;
+
+
+// @ swatch color
+// ------------------------------------------------------------
+
+$swatch-green    :#2ba483;
+$swatch-blue     :#3b5998;
+$swatch-brawn    :#e5d7c6;
+$swatch-red      :#f42d49;
+$swatch-pink     : #f44da0;
+$swatch-pink-darker     : #cd317f;
+$swatch-orange   :#fead34;
+$swatch-yellow   :#FEDA34;
+$swatch-aqua     :#43a3d2;
+
+// @ Scaffolding
+// ------------------------------------------------------------
+
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               #fff;
+//** Global text color on `<body>`.
+$text-color:            #333;
+$text-color-sub:        #888;
+$text-color-white:      #fff;
+
+//** Global textual link color.
+$link-color:            $brand-primary;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%);
+
+$hover-bg : $link-hover-color;
+//** Link hover decoration.
+$link-hover-decoration: underline;
+
+
+//  @Typography
+// ------------------------------------------------------------
+
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-system-font: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", MyYuGothicM, Meiryo, sans-serif;
+$font-family-yugothic: MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+$font-family-yumin : YuMincho,'Yu Mincho',serif;
+$font-family-meiryo: "メイリオ",'Meiryo',MyYuGothicM, YuGothic,'ヒラギノ角ゴシック', 'Hiragino Sans', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-family-noto:  'Noto Sans JP','ヒラギノ角ゴシック', 'Hiragino Sans', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN',MyYuGothicM, YuGothic,"メイリオ",'Meiryo',MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, sans-serif;
+$font-family-fjalla:  'Fjalla One', sans-serif;
+
+
+
+$font-family-base     : $font-family-noto;
+
+$font-size-base       :    15px;
+$font-size-base-tab   :    15px;
+$font-size-base-sp    :    15px;
+
+$font-size-large      :    ceil(($font-size-base * 1.25)); // ~18px
+$font-size-small      :    ceil(($font-size-base * 0.85)); // ~12px
+
+$font-size-h1         :    floor(($font-size-base * 2.6)); // ~36px
+$font-size-h2         :    floor(($font-size-base * 2.15)); // ~30px
+$font-size-h3         :    ceil(($font-size-base * 1.7)); // ~24px
+$font-size-h4         :    ceil(($font-size-base * 1.25)); // ~18px
+$font-size-h5         :    $font-size-base;
+$font-size-h6         :    ceil(($font-size-base * 0.85)); // ~12px
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base     :    1.8;
+$line-height-base-tab :    1.7;
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed :    floor(($font-size-base * $line-height-base)); // ~20px
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family :    inherit;
+$headings-font-weight :    500;
+$headings-line-height :    1.1;
+$headings-color       :    inherit;
+
+
+// @ Tables
+// ------------------------------------------------------------
+
+//## Customizes the `.table` component with basic values, each used across all table variations.
+
+//** Padding for `<th>`s and `<td>`s.
+$table-cell-padding:            8px;
+//** Padding for cells in `.table-condensed`.
+$table-condensed-cell-padding:  5px;
+
+//** Default background color used for all tables.
+$table-bg:                      transparent;
+//** Background color used for `.table-striped`.
+$table-bg-accent:               #f9f9f9;
+//** Background color used for `.table-hover`.
+$table-bg-hover:                #f5f5f5;
+$table-bg-active:               $table-bg-hover;
+
+//** Border color for table and cell borders.
+$table-border-color:            #ddd;
+
+
+// @ Buttons
+// ------------------------------------------------------------
+
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-font-weight   :             normal;
+
+$btn-default-color :             $brand-main;
+$btn-default-bg    :             #fff;
+$btn-default-border:             #8d7754;
+
+$btn-primary-color :             #fff;
+$btn-primary-bg    :             $brand-primary;
+$btn-primary-border:             darken($btn-primary-bg, 5%);
+
+$btn-success-color :             #fff;
+$btn-success-bg    :             $brand-success;
+$btn-success-border:             darken($btn-success-bg, 5%);
+
+$btn-info-color    :             #fff;
+$btn-info-bg       :             $brand-info;
+$btn-info-border   :             darken($btn-info-bg, 5%);
+
+$btn-warning-color :             #fff;
+$btn-warning-bg    :             $brand-warning;
+$btn-warning-border:             darken($btn-warning-bg, 5%);
+
+$btn-danger-color  :             #fff;
+$btn-danger-bg     :             $brand-error;
+$btn-danger-border :             darken($btn-danger-bg, 5%);
+
+$btn-link-disabled-color :       $gray-light;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius-base :        5px;
+$btn-border-radius-large:        20px;
+$btn-border-radius-small:        $border-radius-small;
+
+// ============================================================ //
+// @ Forms
+// ============================================================ //
+
+// @ input bg color
+// ------------------------------ //
+
+$input-bg:                       #fff;
+$input-hover-bg:                 #f4f4f4;
+$input-bg-disabled:              $gray-lighter;
+$input-pad:                      .4em .6em .4em;
+$input-pad-sm:                   .8em .6em;
+$input-color:                    $text-color;
+$input-border:                   #ccc;
+
+// @ input radius
+// ------------------------------
+
+$input-border-radius:            $border-radius-base;
+$input-border-radius-large:      $border-radius-large;
+$input-border-radius-small:      $border-radius-small;
+
+//** Border color for inputs on focus
+$input-border-focus:             #66afe9;
+
+//** Placeholder text color
+$input-color-placeholder:        #999;
+
+//** Default `.form-controlå` height
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2);
+//** Large `.form-control` height
+$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2);
+//** Small `.form-control` height
+$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2);
+
+//** `.form-group` margin
+$form-group-margin-bottom:       15px;
+
+$legend-color:                   $gray-dark;
+$legend-border-color:            #e5e5e5;
+
+//** Background color for textual input addons
+$input-group-addon-bg:           $gray-lighter;
+//** Border color for textual input addons
+$input-group-addon-border-color: $input-border;
+
+//** Disabled cursor for form controls and buttons.
+$cursor-disabled:                not-allowed;
+
+
+// @ Z-index master list
+// ------------------------------------------------------------
+
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+// Note: These variables are not generated into the Customizer.
+
+$zindex-header           :  1000;
+$zindex-dropdown         :  1000;
+$zindex-popover          :  1060;
+$zindex-tooltip          :  1070;
+$zindex-navbar-fixed     :  1030;
+$zindex-nav-menu         :  1033;
+$zindex-navbar-torigger  :  1035;
+$zindex-modal-background :  1040;
+$zindex-modal            :  1050;
+
+
+// @ Media queries breakpoints
+// ------------------------------------------------------------
+
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs     :              320px;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min :              $screen-xs;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone  :              $screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm     :              414px;
+$screen-sm-min :              $screen-sm;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet :              $screen-sm-min;
+
+// iphone5 land scape
+$screen-5ls    :              568px;
+// iphone6 land scape
+$screen-6ls    :              667px;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md     :              769px;
+$screen-md-min :              $screen-sm + 1;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:              $screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg     :              964px;
+$screen-lg-min :              $screen-md + 1;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:           $screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max  :             ($screen-sm-min - 1);
+$screen-sm-max  :             ($screen-md-min - 1);
+$screen-md-max  :             ($screen-lg-min - 1);
+
+
+// @ Grid system
+// ------------------------------------------------------------
+
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns               :  12;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width          :  15px;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint      :  $screen-sm-min;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max  : ($grid-float-breakpoint - 1);
+
+
+// @ Container sizes
+// ------------------------------------------------------------
+
+//## Define the maximum width of `.container` for different screen sizes.
+
+$container-padding-lg        : 30px;
+$container-padding-md        : 3%;
+$container-padding-sm        : 10px;
+
+// Small screen / tablet
+$container-tablet             : ($screen-md + $grid-gutter-width);
+//** For `$screen-sm-min` and up.
+$container-sm                 : 100%;
+
+// Medium screen / desktop
+$container-desktop             : ($screen-lg + $grid-gutter-width);
+//** For `$screen-md-min` and up.
+$container-md                  : 100%;
+
+// Large screen / wide desktop
+$container-large-desktop       : ($screen-lg + $grid-gutter-width);
+//** For `$screen-lg-min` and up.
+$container-lg                  : $screen-lg + ($container-padding-lg *2);
+
+
+// @ FontAwesome
+// ------------------------------------------------------------
+
+$fa-font-path         : "../fonts" !default;
+$fa-font-size-base    : 14px !default;
+$fa-line-height-base  : 1 !default;
+//$fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts" !default; // for referencing Bootstrap CDN font files directly
+$fa-css-prefix        : fa !default;
+$fa-version           : "4.7.0" !default;
+$fa-border-color      : #eee !default;
+$fa-inverse           : #fff !default;
+$fa-li-width          : (30em / 14) !default;
+
+// @ transition & hover opacity
+// ------------------------------------------------------------
+
+$hover-transition   : .3s;
+$hover-opacity      : .7;
+
+
+// @ fontawesome config
+// ------------------------------------------------------------ //
+
+$fa-font-size-base:   $font-size-base;
+$fa-line-height-base: 1;
+//$fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts"; // for referencing Bootstrap CDN font files directly
+$fa-css-prefix:       fa;
+$fa-border-color:     #eee;
+$fa-inverse:          #fff;
+$fa-li-width:         (30em / 14);
+
+// @ toggle color
+// ------------------------------------------------------------
+
+$toggle-color : #444;
+
+// @ size
+// ------------------------------------------------------------
+
+$header-hight: 50px;
+
+

@@ -1,0 +1,173 @@
+/* ============================================================ //
+// @ img
+// ============================================================ */
+
+$img_path: "./../../assets/img/";
+
+// @ Use UnitBuild System
+// ------------------------------------------------------------
+
+#ubs-wrapper{
+  .ubs-img{
+    margin-bottom: 0;
+  }
+}
+
+.ubs-img-unit{
+  a{
+    display: block;
+    @include link-hover();
+  }
+  .ubs-img{
+    @include min-media($screen-lg){
+      margin-bottom: 0;
+    }
+  }
+}
+
+// @ ラッパー要素設定
+// ------------------------------
+
+.ubs-img-unit{
+  margin-left: -10px;
+  margin-right: -10px;
+  width: calc(100% + 20px);
+  display: flex;
+  -js-display: flex;
+  flex-flow: row wrap;
+}
+
+// @ アイテム要素
+// ------------------------------
+
+.ubs-img-item{
+  margin-bottom: 10px;
+  @include max-media($screen-md){
+    margin-bottom: 15px;
+  }
+  @include max-media($screen-sm){
+    margin-bottom: 20px;
+  }
+  a{
+    display: block;
+  }
+}
+
+// @ レイアウト設定
+// ------------------------------
+
+.img-layout{
+  &--left{
+    justify-content: flex-start;
+  }
+  &--center{
+    justify-content: center;
+  }
+  &--right{
+    justify-content: flex-end;
+  }
+}
+
+// @  画像サイズ設定
+// ------------------------------------------------------------
+
+@mixin img-size-lg(){
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+@mixin img-size-md(){
+  width: calc(50% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+@mixin img-size-sm(){
+  width: calc(33.333% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+@mixin img-size-1col(){
+  width: calc(100% - 20px);
+}
+
+.img-size{
+  &--lg{
+    &--default{
+      @include img-size-lg();
+      @include max-media($screen-md){
+        @include img-size-1col();
+      }
+    }
+    &--md{
+      @include img-size-lg();
+      @include max-media($screen-sm){
+        @include img-size-1col();
+      }
+    }
+    &--sm{
+      @include img-size-1col();
+    }
+  }
+  &--md{
+    &--default{
+      @include img-size-md();
+      @include max-media($screen-md){
+        @include img-size-1col();
+      }
+    }
+    &--md{
+      @include img-size-md();
+      @include max-media($screen-sm){
+        @include img-size-1col();
+      }
+    }
+    &--sm{
+      @include img-size-md();
+    }
+  }
+  &--sm{
+    &--default{
+      @include img-size-sm();
+      @include max-media($screen-md){
+        @include img-size-1col();
+      }
+    }
+    &--md{
+      @include img-size-sm();
+      @include max-media($screen-sm){
+        @include img-size-1col();
+      }
+    }
+    &--sm{
+      @include img-size-sm();
+    }
+  }
+}
+
+// @ キャプション
+// ------------------------------------------------------------
+
+.ubs-figcaption{
+  padding: .7em .5em;
+  line-height: 1.2;
+  font-size: 13px;
+  color: $text-color-sub;
+  font-style: italic;
+}
+
+// @ 画像スタイル
+// ------------------------------------------------------------
+
+.img--radius{
+  border-radius: 5px;
+}
+
+.img--circle{
+  border-radius: 50%;
+}
+
+.img--border{
+  border:solid 1px #ddd;
+  box-sizing: border-box;
+  padding: 3px;
+}

@@ -1,0 +1,22 @@
+// ============================================================ //
+// @ footer visual
+// ============================================================ //
+
+$img_path: "./../../assets/img/";
+
+.footer-about-group{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid01{
+  margin-right: 10px;
+
+}
+
+.grid02{
+  max-width: 50%;
+  width: 50%;
+}

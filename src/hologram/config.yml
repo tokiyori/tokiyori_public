@@ -1,0 +1,12 @@
+# hologram config
+# スタイルガイドのもとになるスタイルシートファイルがあるディレクトリ
+source: ../assets/scss
+# スタイルガイドの書き出し先のディレクトリ
+#destination: ../../docs/styleguide
+destination: ../../cms/wordpress/wp-content/themes/yswallow_child/docs/styleguide
+# スタイルガイドのテンプレートがあるディレクトリ
+documentation_assets: templates
+# Markdown をパースするときに実行する Ruby ファイル
+custom_markdown: markdown_renderer.rb
+# スタイルガイドの名前
+styleguide_name: 'UnitBuildSystem'

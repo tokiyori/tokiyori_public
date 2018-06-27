@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= @config['styleguide_name'] %><% if title %> · <%= title %><% end %></title>
+    <link rel="stylesheet" href="../app/stylesheets/button.css">
+    <link rel="stylesheet" href="./css/styleguide.css">
+    <link rel="stylesheet" href="./css/styleguide.css">
+    <link rel="stylesheet" href="./css/styleguide.css">
+    <link rel="stylesheet" href="./assets/css/style.css" media="all">
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/vender.js"></script>
+    <script src="./assets/js/common.js"></script>
+  </head>
+  <body>
+    <header class="styleguide_header">
+      <h1 class="styleguide_brand">
+        <%= @config['styleguide_name'] %>
+      </h1>
+
+    </header>
+    <div class="styleguide_main">
+    <div class="styleguide_side">
+        <nav class="styleguide-nav">
+        <ul class="styleguide-nav__body">
+          <% @categories.each do |category| %>
+          <li class="styleguide-nav__item">
+            <a href="<%= category[1] %>"><%= category[0] %></a>
+          </li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+    <article class="styleguide_article">
+      <div class="styleguide_article__inner">
+      <% if title %>
+        <h1 class="sg-heading01">
+          <%= title %>
+        </h1>
+        <ul class="sg-list01">
+          <% @blocks.each do |block| %>
+            <li><a href="#<%= block[:name] %>"><%= block[:title] %></a></li>
+          <% end %>
+        </ul>
+      <% end %>
+      <div class="styleguide_content">

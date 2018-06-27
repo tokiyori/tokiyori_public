@@ -1,0 +1,35 @@
+/* ============================================================ //
+// @ Table
+// ============================================================ */
+
+$img_path: "./../../assets/img/";
+
+#customize-wrapper {
+
+  .tabel01 {
+    table {
+      border: 1px solid $brand-main;
+    }
+
+    th{
+      border-bottom: 1px solid $brand-main;
+      border-right: 1px solid $brand-main-lighten;
+      background: $brand-main;
+      color: #FFFFFF;
+
+      &:last-child {
+        border-right: 1px solid $brand-main;
+      }
+    }
+
+    tr{
+      border-bottom: 1px solid $brand-main;
+    }
+
+    td{
+      border-right: 1px solid $brand-main;
+    }
+  }
+
+
+}

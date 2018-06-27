@@ -1,0 +1,165 @@
+#ubs-wrapper {
+
+  /*doc
+  ---
+  title: よくある質問
+  name: faq-item
+  category: ubs
+  ---
+
+  ```html_example
+
+  <section class="js-faq-filter">
+
+    <article class="faq-item is-men">
+      <header class="faq-item-header">
+        <div class="faq-item-header__th"><span class="faq-item-header__th__icon">Q</span></div>
+        <div class="faq-item-header__td">
+          <span class="faq-item-header__td__label">男性向け</span>
+          <p class="faq-item-header__td__title">ご入会時に支払う金額はいくらですか？</p>
+        </div>
+      </header>
+      <div class="faq-item-body">
+        <div class="faq-item-body__th"><span class="faq-item-body__th__icon">A</span></div>
+        <div class="faq-item-body__td text-unit"><p>男性は、ご入会金総額3万円でございます。なおその料金の中に、お1人の異性のご紹介料が含まれております。２人目以降は、別途ご紹介料を頂戴しておりまして、原則2万円でございます。</p></div>
+      </div>
+    </article>
+
+    <article class="faq-item is-ladies">
+      <header class="faq-item-header">
+        <div class="faq-item-header__th"><span class="faq-item-header__th__icon">Q</span></div>
+        <div class="faq-item-header__td">
+          <span class="faq-item-header__td__label">女性向け</span>
+          <p class="faq-item-header__td__title">交通費はいつ誰にお支払いするのですか？</p>
+        </div>
+      </header>
+      <div class="faq-item-body">
+        <div class="faq-item-body__th"><span class="faq-item-body__th__icon">A</span></div>
+        <div class="faq-item-body__td text-unit"><p>デートが終わって夜遅くなった時等に、女性にタクシー代をお渡しする場合もあります。遅くならなくてもわざわざ来てくれて、化粧代も移動代もかかるので、夜遅くなくてもお渡しする場合が多いです。もちろん、女性とおつきあいする中で、いらないとおっしゃられる方もおられますし、逆に遠方の場合は、交通費がかなりかかる方もおられます。ご協力いただけたら幸いです。</p></div>
+      </div>
+    </article>
+
+    <article class="faq-item is-unisex">
+      <header class="faq-item-header">
+        <div class="faq-item-header__th"><span class="faq-item-header__th__icon">Q</span></div>
+        <div class="faq-item-header__td">
+          <span class="faq-item-header__td__label">共通</span>
+          <p class="faq-item-header__td__title">交通費はいつ誰にお支払いするのですか？</p>
+        </div>
+      </header>
+      <div class="faq-item-body">
+        <div class="faq-item-body__th"><span class="faq-item-body__th__icon">A</span></div>
+        <div class="faq-item-body__td text-unit"><p>デートが終わって夜遅くなった時等に、女性にタクシー代をお渡しする場合もあります。遅くならなくてもわざわざ来てくれて、化粧代も移動代もかかるので、夜遅くなくてもお渡しする場合が多いです。もちろん、女性とおつきあいする中で、いらないとおっしゃられる方もおられますし、逆に遠方の場合は、交通費がかなりかかる方もおられます。ご協力いただけたら幸いです。</p></div>
+      </div>
+    </article>
+
+  </section>
+
+
+  ```
+
+  */
+
+  .faq-item {
+    padding: 40px 0 33px;
+    border-bottom: 1px solid #e1e1e1;
+    &.is-mens {
+      .faq-item-header__td__label {
+        background: $brand-mens;
+      }
+    }
+    &.is-ladies {
+      .faq-item-header__td__label {
+        background: $brand-ladies;
+      }
+    }
+    &.is-unisex {
+      .faq-item-header__td__label {
+        background: $brand-unisex;
+      }
+    }
+  }
+
+  // @ header
+  // ------------------------------------------------------------
+
+  .faq-item .faq-item-header{
+    display: flex;
+    -js-display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    //
+    padding: 1.2em 0em 1em;
+    margin-bottom: 1.7em;
+    border-bottom: none;
+    &__th {
+      width: 42px;
+      padding-top: 4px;
+    }
+    &__th__icon {
+      display: inline-block;
+      width: 42px;
+      height: 42px;
+      line-height: 40px;
+      text-align: center;
+      background: #ae2059;
+      color: #FFF;
+      border-radius: 50%;
+      font-size: 2em;
+      font-family: 'Concert One', cursive;
+    }
+    &__td {
+      box-sizing: border-box;
+      width: calc(100% - 42px);
+      padding: 0 0 0 15px;
+    }
+    &__td__label {
+      padding: .2em .5em;
+      font-size: 11px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    &__td__title {
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+  }
+  // @
+  // ------------------------------------------------------------
+  .faq-item-body {
+    display: flex;
+    -js-display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    //
+    &__th {
+      width: 42px;
+    }
+    &__th__icon {
+      display: inline-block;
+      width: 42px;
+      height: 42px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 50%;
+      font-size: 20px;
+      font-size: 2rem;
+      font-family: 'Concert One', cursive;
+      background: #f3f3f3;
+      color: #000;
+    }
+    &__td {
+      box-sizing: border-box;
+      width: calc(100% - 42px);
+      padding: 0 0 0 15px;
+      P {
+        font-size: .9em;
+      }
+    }
+    &__td__title {
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+  }
+}

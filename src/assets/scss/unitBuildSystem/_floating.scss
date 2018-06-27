@@ -1,0 +1,25 @@
+/* ============================================================ //
+// @ floating
+// ============================================================ */
+
+$img_path: "./../../assets/img/";
+
+.ubs-floating-unit{
+  margin-left: -10px;
+  margin-right: -10px;
+  width: calc(100% + 20px);
+  @include clearfix();
+  p{
+    padding: 0 10px;
+  }
+}
+
+.column__img{
+  &--left{
+    float: left;
+  }
+  &--right{
+    float: right;
+  }
+
+}

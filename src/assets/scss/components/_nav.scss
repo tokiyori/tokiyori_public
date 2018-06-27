@@ -1,0 +1,37 @@
+/* ============================================================ //
+// @ navigation style
+// ============================================================ */
+
+$img_path: "./../../assets/img/";
+
+#customize-wrapper {
+
+  #g_nav {
+    @include min-media($screen-lg) {
+      margin-top: 0;
+    }
+  }
+
+  #g_nav .nav > li > a {
+    @include min-media($screen-lg) {
+      padding: 12px 0;
+    }
+  }
+
+  // ------------------------------
+  // @ ハンバーガーナビ
+  // ------------------------------
+
+  .sp_sav {
+    display: none;
+
+    @include max-media($screen-md) {
+      display: block;
+    }
+
+    @include max-media($screen-sm) {
+      display: block;
+    }
+  }
+}
+

@@ -1,0 +1,7 @@
+node_modules
+/node_modules/
+Gemfile.lock
+.DS_Store
+.idea
+.sass-cache
+docs

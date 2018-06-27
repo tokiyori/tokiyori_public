@@ -1,0 +1,26 @@
+/* ============================================================ //
+// @ layout container
+// ============================================================ */
+
+#customize-wrapper{
+  .section-container{
+    margin-bottom: 80px;
+    @include max-media($screen-md){
+      margin-bottom: 80px;
+    }
+    @include max-media($screen-sm){
+      margin-bottom: 60px;
+    }
+    &:last-child{
+      margin-bottom: 30px;
+    }
+  }
+}
+
+#main{
+  line-height: $line-height-base;
+  font-size: $font-size-base;
+  @include min-media($screen-lg){
+    margin-bottom: 50px;
+  }
+}

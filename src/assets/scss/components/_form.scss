@@ -1,0 +1,219 @@
+/* ============================================================ //
+// @ form
+// ============================================================ */
+
+$img_path: "./../../assets/img/";
+
+#customize-wrapper {
+  // ------------------------------------------------------------
+  // @ form-control
+  // ------------------------------------------------------------
+  .form-control {
+    margin: 0;
+    outline: none;
+    //appearance
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+    vertical-align: middle;
+    &:focus,
+    &:hover {
+      border-color: $brand-primary;
+    }
+    &:active {
+      border-color: $brand-primary;
+    }
+    &:focus {
+      outline: 0;
+      border-color: $brand-primary;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05), 0 0 8px rgba(204, 204, 204, .3);
+    }
+    &::-webkit-input-placeholder {
+      color: $input-color-placeholder;
+    }
+    &::-moz-input-placeholder {
+      color: $input-color-placeholder;
+    }
+    &::-ms-input-placeholder {
+      color: $input-color-placeholder;
+    }
+  }
+
+  // ------------------------------------------------------------
+  // @ form-control width
+  // ------------------------------------------------------------
+  #main input[type="text"], #main input[type="password"], #main input[type="datetime"], #main input[type="datetime-local"], #main input[type="date"], #main input[type="month"], #main input[type="time"], #main input[type="week"], #main input[type="number"], #main input[type="email"], #main input[type="url"], #main input[type="search"], #main input[type="tel"], #main input[type="color"], #main select, #main textarea, #main .field{
+    &.form-w100p{
+      width: 100%;
+      max-width: 100%;
+    }
+    &.form-w90p{
+      width: 90%;
+      max-width: 90%;
+    }
+    &.form-w80p{
+      width: 80%;
+      max-width: 80%;
+    }
+    &.form-w75p{
+      width: 75%;
+      max-width: 75%;
+    }
+    &.form-w70p{
+      width: 70%;
+      max-width: 70%;
+    }
+    &.form-w60p{
+      width: 60%;
+      max-width: 60%;
+    }
+    &.form-w50p{
+      width: 50%;
+      max-width: 50%;
+    }
+    &.form-w40p{
+      width: 40%;
+      max-width: 40%;
+    }
+    &.form-w30p{
+      width: 30%;
+      max-width: 30%;
+    }
+  }
+  select.form-control{
+    padding: 2%;
+    line-height: 1;
+  }
+  textarea.form-control{
+    padding: 10px;
+  }
+
+  // ------------------------------------------------------------
+  // @ label
+  // ------------------------------------------------------------
+
+  .form-label-req{
+    z-index: 2;
+    top: -2px;
+    position: relative;
+    margin-left: 5px;
+    display: inline-block;
+    background: #cc0000;
+    color: #fff;
+    font-size: 10px;
+    line-height: 1;
+    padding: .3em .5em;
+    float: right;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  // ------------------------------------------------------------
+  // @ contact-form-table
+  // ------------------------------------------------------------
+
+  .contact-form-table{
+    table{
+      @include max-media($screen-sm){
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        border:none;
+      }
+    }
+    tr{
+      @include max-media($screen-sm){
+        border:none;
+      }
+    }
+    th{
+      width: 35%;
+      max-width: 35%;
+      text-align: left;
+      @include max-media($screen-sm){
+        text-align: left;
+        border-left:solid 1px rgb(229, 229, 229);
+        border-right:solid 1px rgb(229, 229, 229);
+        border-top:none;
+        border-bottom:none;
+      }
+
+    }
+    td{
+      position: relative;
+      @include max-media($screen-sm){
+        border-top: none;
+        border-bottom:none;
+        border-color: rgb(229, 229, 229);
+      }
+    }
+    th,td{
+      @include max-media($screen-sm){
+        display: block;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  // ------------------------------------------------------------
+  // @ Contact Form 7 add confirm
+  // ------------------------------------------------------------
+
+  .form-sbmit-group{
+    width: 100%;
+    max-width: 100%;
+    @include clearfix();
+  }
+
+  .form_confirm{
+    display: block;
+    margin: 0 auto;
+    background: $brand-primary;
+    @include link-hover();
+  }
+
+  .form_backedit{
+    display: block;
+    float: left;
+    background: $brand-info;
+    @include link-hover();
+  }
+
+  .form_submit{
+    float: right;
+    display: block;
+    background: $brand-success;
+    @include link-hover();
+  }
+
+  .wpcf7c-conf{
+    background: #edfaff;
+    pointer-events: none;
+  }
+
+  // ------------------------------------------------------------
+  // @ Contact Form 7 キャンセル
+  // ------------------------------------------------------------
+
+  // @ バリデートメッセージキャンセル
+  // ------------------------------
+  .wpcf7-not-valid-tip{
+    display: none!important;
+  }
+  // @ ローダーキャンセル
+  // ------------------------------
+
+  div.wpcf7 .ajax-loader {
+    display: none !important;
+  }
+
+  // @ アラートボックスキャンセル
+  // ------------------------------
+  .wpcf7-mail-sent-ok,
+  .wpcf7-validation-errors{
+    display:none !important;
+  }
+}
+
